@@ -1,0 +1,8 @@
+os.makedirs("output", exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    file_path = f"output/douane_ventes_{timestamp}.csv"
+    df.to_csv(file_path, index=False, encoding="utf-8-sig")
+    print(f"✅ Données exportées dans {file_path}")
+    print(f"✅ {new_count} nouvelles ventes stockées dans DynamoDB.")
+
+    browser.close()
